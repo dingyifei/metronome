@@ -1,14 +1,14 @@
-function metronome(bpm) {
+function metronome() {
     var audio = document.getElementById("a.mp3");
-    while(true){
-        var date = new Date();
-        audio.play();
-        while((new Date() - date) < ((60/bpm)*1000));
-    }
-
+    audio.play();
+    clearInterval(start)
 }
 function startMetronome(){
     var bpm = document.getElementById("bpm");
+    var start;
+    start = window.setInterval(function () {
+        metronome();
+        clearInterval(start)
+    }, 60000/bpm.value);
 
-    metronome(bpm.value);
 }
