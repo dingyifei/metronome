@@ -10,5 +10,4 @@ function startMetronome(){
         metronome();
         clearInterval(start)
     }, 60000/bpm.value);
-
 }

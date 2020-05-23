@@ -2,6 +2,15 @@ h1{
     font-size: 45px;
     text-align: center;
 }
+h2{
+    text-align: center;
+}
 table{
     border: 2px solid grey;
+}
+@media all and (orientation: landscape) {
+    h1{
+        background-color: red;
+        font-size: 50px;
+    }
 }
